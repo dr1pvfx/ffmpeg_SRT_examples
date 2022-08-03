@@ -1,0 +1,11 @@
+You can specify certain things like latency in the srt url
+
+'srt://url:port?pkt_size=1316?latency=50000'
+for example, please see srt documentation for valid extra parameters.
+
+Notes on stream latency:
+
+-g  specifies the keyframe distance for lower latency you can use -g 1  for all-intra encoding, you can also set the x264 tune to zerolatency.
+
+I recommend using OBS for testing , you can use the record module set to "output to url" to run abritary ffmpeg things, and if you build OBS from source you can even set HDR.
+

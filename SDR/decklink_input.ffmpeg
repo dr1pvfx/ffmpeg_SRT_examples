@@ -1,0 +1,5 @@
+ffmpeg -f decklink -channels 2  -video_input hdmi  \
+-i 'UltraStudio 4K Mini' \
+-c:v libx264 -b:v 5M -g 24 \
+-c:a copy -f mpegts \
+'srt://url:port?pkt_size=1316'

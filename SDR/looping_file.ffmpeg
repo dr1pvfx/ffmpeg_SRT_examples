@@ -1,0 +1,5 @@
+ffmpeg -stream_loop -1 -re \
+-i /path/to/file.mov \
+-c:v libx264 -b:v 5M -g 24 \
+-c:a copy -f mpegts \
+'srt://url:port?pkt_size=1316'

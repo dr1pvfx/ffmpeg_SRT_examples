@@ -1,0 +1,8 @@
+ffmpeg -f decklink -channels 2  -video_input hdmi  \
+-i 'UltraStudio 4K Mini' \
+-pix_fmt p010le -c:v hevc_videotoolbox -realtime true -b:v 25M -level 5.2 -g 25 -profile:v main10 \
+-map 0 \
+-color_primaries bt2020 \
+-color_trc smpte2084 -colorspace bt2020nc \
+-c:a aac -ar 48k -b:a 256k -f mpegts \
+'srt://url:port?pkt_size=1316'
